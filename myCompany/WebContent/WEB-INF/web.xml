@@ -8,6 +8,13 @@
 		<welcome-file>index.jsp</welcome-file>
 	</welcome-file-list>
  
+ <context-param>
+        <param-name>contextConfigLocation</param-name>
+        <param-value>classpath:applicationContext.xml</param-value>
+    </context-param>
+
+
+ 
 	<!-- 配置Spring 前端控制器 -->
 	<servlet>
 		<servlet-name>Hello</servlet-name>
