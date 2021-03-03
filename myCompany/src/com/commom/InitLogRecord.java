@@ -11,7 +11,7 @@ public class InitLogRecord {
         FileInputStream fileInputStream = null;
         try {
             Properties properties = new Properties();
-            fileInputStream = new FileInputStream("src/config/log4j.properties");
+            fileInputStream = new FileInputStream("src/resources/properties/log4j.properties");
             properties.load(fileInputStream);
             PropertyConfigurator.configure(properties);
         } catch (Exception e) {

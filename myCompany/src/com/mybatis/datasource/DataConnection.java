@@ -10,7 +10,7 @@ import org.apache.ibatis.session.SqlSessionFactoryBuilder;
  
 public class DataConnection {
 	//MyBatis≈‰÷√Œƒº˛
-	private String resource="mybatis-config.xml";
+	private String resource="resources/application/spring-mybatis.xml";
 	private SqlSessionFactory sqlSessionFactory;
 	private SqlSession sqlSession;
 	public SqlSession getSqlSession() throws IOException{
