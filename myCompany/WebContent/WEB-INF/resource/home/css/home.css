@@ -1,0 +1,15 @@
+@charset "UTF-8";
+。header-div1{
+	float: right;
+}
+
+.header-ul{
+	list-style-type: none;
+    line-height: normal;
+}
+
+.header-li{
+	line-height: 100px;
+    float: left;
+    margin-left: 10px;
+}
