@@ -35,5 +35,12 @@
 		        </div>
 		    </div>
 		</header>
+		<div>
+		用户ID:${userBean.id}<br/>
+		姓名:${userBean.username}<br/>
+		密码:${userBean.password}<br/>
+		性别:${userBean.gender}<br/>
+		生日:${userBean.birthday}<br/>
+		</div>
 	</body>
 </html>
