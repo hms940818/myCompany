@@ -3,8 +3,8 @@ package com.mybatis.dao;
 import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
 
-import com.mybatis.mapper.UserDao;
-import com.mybatis.model.User;
+import com.mybatis.dao.mapper.UserDao;
+import com.mybatis.dao.model.User;
 
 public class UserDaoImpl implements UserDao{
 
@@ -20,7 +20,7 @@ public class UserDaoImpl implements UserDao{
     @Override
     public User findUserById(int id) {
         SqlSession sqlSession = sqlSessionFactory.openSession();//获取sqlSession
-        User user = sqlSession.selectOne("user.findUserById", id);
+        User user = sqlSession.selectOne("findUserById", id);
         sqlSession.close();//关闭资源
         return user;
     }
@@ -28,7 +28,7 @@ public class UserDaoImpl implements UserDao{
     public void insertUser(User user) {
         SqlSession sqlSession = sqlSessionFactory.openSession();
         //执行插入操作
-        sqlSession.insert("user.insertUser", user);
+        sqlSession.insert("insertUser", user);
         // 提交事务
         sqlSession.commit();
         // 释放资源

@@ -10,8 +10,8 @@ import org.junit.Before;
 import org.junit.Test;
 
 import com.mybatis.dao.UserDaoImpl;
-import com.mybatis.mapper.UserDao;
-import com.mybatis.model.User;
+import com.mybatis.dao.mapper.UserDao;
+import com.mybatis.dao.model.User;
  
 public class MyBatisTest {
     private SqlSessionFactory sqlSessionFactory;

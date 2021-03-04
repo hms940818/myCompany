@@ -1,6 +1,6 @@
-package com.mybatis.mapper;
+package com.mybatis.dao.mapper;
 
-import com.mybatis.model.User;
+import com.mybatis.dao.model.User;
 
 public interface UserDao {
 		public void insertUser(User user);

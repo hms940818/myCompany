@@ -1,4 +1,4 @@
-package com.mybatis.model;
+package com.mybatis.dao.model;
 
 import java.io.Serializable;
 import java.util.Date;
@@ -12,14 +12,14 @@ public class User implements Serializable {
 	public User() {
 		// TODO Auto-generated constructor stub
 	}
-	private Integer id;
+	private String id;
 	private String username;
 	private String password;
 	private String gender;
-	private Date birthday;
+	private String birthday;
 	
-	public User(Integer id, String username, String password, String gender,
-			Date birthday) {
+	public User(String id, String username, String password, String gender,
+			String birthday) {
 		super();
 		this.id = id;
 		this.username = username;
@@ -28,11 +28,11 @@ public class User implements Serializable {
 		this.birthday = birthday;
 	}
 
-	public Integer getId() {
+	public String getId() {
 		return id;
 	}
 
-	public void setId(Integer id) {
+	public void setId(String id) {
 		this.id = id;
 	}
 
@@ -60,11 +60,11 @@ public class User implements Serializable {
 		this.gender = gender;
 	}
 
-	public Date getBirthday() {
+	public String getBirthday() {
 		return birthday;
 	}
 
-	public void setBirthday(Date birthday) {
+	public void setBirthday(String birthday) {
 		this.birthday = birthday;
 	}
 
