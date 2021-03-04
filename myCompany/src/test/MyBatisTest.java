@@ -1,29 +1,37 @@
 package test;
 
 import java.io.IOException;
-import org.apache.ibatis.session.SqlSession;
+import java.io.InputStream;
+
+import org.apache.ibatis.io.Resources;
+import org.apache.ibatis.session.SqlSessionFactory;
+import org.apache.ibatis.session.SqlSessionFactoryBuilder;
+import org.junit.Before;
 import org.junit.Test;
 
-import com.commom.InitLogRecord;
-import com.mybatis.datasource.DataConnection;
-import com.mybatis.mapper.UserMapper;
+import com.mybatis.dao.UserDaoImpl;
+import com.mybatis.mapper.UserDao;
 import com.mybatis.model.User;
  
 public class MyBatisTest {
-	public DataConnection dataConn=new DataConnection();
-	@Test
-	public void TestSelect() throws IOException{
-		InitLogRecord.initLog();
-                //构建sqlsession对象
-		SqlSession sqlSession=dataConn.getSqlSession();
-		//sqlSession.selectOne最终结果与映射文件中所匹配的resultType类型
-                //得到映射接口实例
-		UserMapper userMapper=sqlSession.getMapper(UserMapper.class);
-                //执行方法
-		User user=userMapper.findUserById(1);
-		System.out.println(user);
-		sqlSession.close();
-                //因为是查询语句，不需要提交事务
-                //只用insert，update，delete需要提交事务
-	}
+    private SqlSessionFactory sqlSessionFactory;
+    @Before
+    public void init() throws IOException{
+        //创建sqlSessionFactory
+        //MyBatis配置文件
+        String resource = "resources/application/spring-mybatis.xml";
+        //得到配置文件流
+        InputStream inputStream = Resources.getResourceAsStream(resource);
+        //创建会话工厂，传入MyBatis的配置信息
+        sqlSessionFactory = new SqlSessionFactoryBuilder().build(inputStream);
+    }
+    @Test
+    public void testFindUserById() throws Exception{
+        //创建UserDao对象
+        UserDao userDao = new UserDaoImpl(sqlSessionFactory);
+        //调用UserDao的方法，根据ID查找user
+        User user = userDao.findUserById(10);
+        //打印客户信息
+        System.out.println(user);
+    }
 }

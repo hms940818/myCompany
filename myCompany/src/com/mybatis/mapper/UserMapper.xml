@@ -3,7 +3,7 @@
 PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <!--namespace是UserMapper接口的路径-->
-<mapper namespace="com.mybatis.mapper.UserMapper">
+<mapper namespace="com.mybatis.mapper.UserDao">
 	<resultMap type="com.mybatis.model.User" id="userResult">
                 <!--通过resultMap建立pojo类属性与数据库字段一一对应的关系-->
                 <!--主键必须要有-->
