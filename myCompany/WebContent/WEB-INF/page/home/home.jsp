@@ -5,6 +5,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <link rel="stylesheet" type="text/css" href="/myCompany/resource/home/css/home.css">
+<script type="text/javascript" src="/myCompany/resource/home/js/home.js"></script>
 <title>姜氏集团</title>
 </head>
 	<body>
@@ -32,13 +33,20 @@
 	                </ul>
 	            </div>
 	        </div>
+	        <div class="regist-button">
+	            	<button type="button">注册</button>
+	        </div>
+	        <div class="login-button">
+	            	<button type="button" id="loginButton" onclick="login()">登录</button>
+	        </div>
 	    </div>
-		<div>
-		用户ID:${userBean.id}<br/>
-		姓名:${userBean.username}<br/>
-		密码:${userBean.password}<br/>
-		性别:${userBean.gender}<br/>
-		生日:${userBean.birthday}<br/>
-		</div>
+	    
+<!-- 		<div> -->
+<%-- 		用户ID:${userBean.id}<br/> --%>
+<%-- 		姓名:${userBean.username}<br/> --%>
+<%-- 		密码:${userBean.password}<br/> --%>
+<%-- 		性别:${userBean.gender}<br/> --%>
+<%-- 		生日:${userBean.birthday}<br/> --%>
+<!-- 		</div> -->
 	</body>
 </html>

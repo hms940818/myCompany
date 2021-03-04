@@ -13,3 +13,11 @@
     float: left;
     margin-left: 10px;
 }
+
+.regist-button{
+	float:right;
+}
+
+.login-button{
+	float:right;
+}
