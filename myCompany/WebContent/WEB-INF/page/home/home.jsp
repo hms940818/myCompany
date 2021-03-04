@@ -8,33 +8,31 @@
 <title>姜氏集团</title>
 </head>
 	<body>
-		<header >
-		    <div class="am-container-1">
-		        <div class="am-topbar-brand">
-		            <a href="">
-		                <img class="logo" src="/myCompany/resource/home/img/logo.png">
-		            </a>
-		        </div>
-		        <div class="header-div1" id="doc-topbar-collapse">
-		            <div class=" " >
-		                <ul class="header-ul">
-		                    <li class="header-li">
-		                        <a href="/myCompany/home/" title="首页" target="_self">首页</a>
-		                    </li>
-		                    <li class="header-li">
-		                        <a href="/100022/" title="about us" target="_self">about us</a>
-		                    </li>
-		                    <li class="header-li">
-		                        <a href="/100033/" title="产品" target="_blank">产品</a>
-		                    </li>
-		                    <li class="header-li">
-		                        <a href="/zx/"title="contact" target="_self">contact</a>
-		                    </li>
-		                </ul>
-		            </div>
-		        </div>
-		    </div>
-		</header>
+	    <div class="am-container-1">
+	        <div class="am-topbar-brand">
+	            <a href="">
+	                <img class="logo" src="/myCompany/resource/home/img/logo.png">
+	            </a>
+	        </div>
+	        <div class="header-div1" id="doc-topbar-collapse">
+	            <div class=" " >
+	                <ul class="header-ul">
+	                    <li class="header-li">
+	                        <a href="/myCompany/home/" title="首页" target="_self">首页</a>
+	                    </li>
+	                    <li class="header-li">
+	                        <a href="/100022/" title="about us" target="_self">about us</a>
+	                    </li>
+	                    <li class="header-li">
+	                        <a href="/100033/" title="产品" target="_blank">产品</a>
+	                    </li>
+	                    <li class="header-li">
+	                        <a href="/zx/"title="contact" target="_self">contact</a>
+	                    </li>
+	                </ul>
+	            </div>
+	        </div>
+	    </div>
 		<div>
 		用户ID:${userBean.id}<br/>
 		姓名:${userBean.username}<br/>
