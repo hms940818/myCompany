@@ -30,7 +30,7 @@ public class MyBatisTest {
         //创建UserDao对象
         UserDao userDao = new UserDaoImpl(sqlSessionFactory);
         //调用UserDao的方法，根据ID查找user
-        User user = userDao.findUserById(10);
+        User user = userDao.findUserById("test@test.com");
         //打印客户信息
         System.out.println(user);
     }

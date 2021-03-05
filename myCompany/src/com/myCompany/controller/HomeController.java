@@ -9,10 +9,11 @@ import com.mybatis.dao.model.User;
 
 
 @Controller
+
 public class HomeController {
 
 	@RequestMapping("/home")
-	public ModelAndView Home(){
+	public ModelAndView Init(){
 		ModelAndView view = new ModelAndView();
 		
 		HomeService homeService = new HomeService();
@@ -22,5 +23,21 @@ public class HomeController {
 		view.setViewName("home/home");
 		
 		return view;
+	}
+	
+	//µÇÂ¼
+	@RequestMapping("/login")
+	public String toLogin(){
+		
+		System.out.print("toLogin");
+		return "login";
+	}
+	
+	//µÇÂ¼
+	@RequestMapping("/regist")
+	public String toRegist(){
+		
+		System.out.print("toRegist");
+		return "regist/regist";
 	}
 }

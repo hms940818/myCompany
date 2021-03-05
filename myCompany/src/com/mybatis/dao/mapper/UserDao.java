@@ -6,5 +6,5 @@ public interface UserDao {
 		public void insertUser(User user);
 		public void updateUser(User user);
 		public void DeleteStudent(int i);
-		public User findUserById(int i);
+		public User findUserById(String i);
 	}

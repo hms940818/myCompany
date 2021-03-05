@@ -14,8 +14,26 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 		<result property="birthday" column="birthday"/>
 	</resultMap>
         <!--id与接口中的方法名要一致-->
-	<select id="findUserById" parameterType="int" resultType="com.mybatis.dao.model.User">
+	<select id="findUserById" parameterType="String" resultType="com.mybatis.dao.model.User">
                 <!--#{}表示一个占位符，其中的id表示接受输入参数的名称-->
-		SELECT * FROM TUSER 
+		SELECT * FROM TUSER where "id"= #{id}
 	</select>
+	
+	<insert id="insertUser" parameterType="com.mybatis.dao.model.User">
+		INSERT
+		INTO tuser (
+		"id",
+		"username",
+		"password",
+		"gender",
+		"birthday"
+		)
+		VALUES (
+		#{id}, 
+		#{username}, 
+		#{password}, 
+		#{gender}, 
+		#{birthday}
+		)
+	</insert>
 </mapper>

@@ -18,12 +18,14 @@ public class UserDaoImpl implements UserDao{
     }
     
     @Override
-    public User findUserById(int id) {
+    public User findUserById(String id) {
         SqlSession sqlSession = sqlSessionFactory.openSession();//获取sqlSession
         User user = sqlSession.selectOne("findUserById", id);
         sqlSession.close();//关闭资源
         return user;
     }
+    
+    
     @Override
     public void insertUser(User user) {
         SqlSession sqlSession = sqlSessionFactory.openSession();
