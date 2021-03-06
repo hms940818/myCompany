@@ -14,7 +14,7 @@
 	<body>
 		<form method="post">
 		<%@ include file="../common/commomHeader.jsp"%>
-		   <div class="contact-title"> 多谢您的联络，我们也会尽快与您联系！</div>
+		   <div class="contact-title"> <spring:message code="contact。complete.message"/></div>
 
 		 
 		</form>
