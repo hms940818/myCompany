@@ -4,28 +4,33 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
-import com.myCompany.service.HomeService;
-import com.mybatis.dao.model.User;
+import com.myCompany.model.HomeWebDto;
 
 
 @Controller
 
 public class HomeController {
 
+	/**
+	 * ³õÊ¼»¯
+	 * @return
+	 */
 	@RequestMapping("/home")
 	public ModelAndView init(){
 		ModelAndView view = new ModelAndView();
+		HomeWebDto webDto = new HomeWebDto();
 		
-		HomeService homeService = new HomeService();
-		User userBean = new User();
-		userBean = homeService.getUserById();
-		view.addObject("userBean", userBean);
+		webDto.setCurrentTab("top");
+		view.addObject("webDto", webDto);
 		view.setViewName("home/home");
 		
 		return view;
 	}
 	
-	//µÇÂ¼
+	/**
+	 * µÇÂ¼
+	 * @return
+	 */
 	@RequestMapping("/login")
 	public String toLogin(){
 		
@@ -33,7 +38,10 @@ public class HomeController {
 		return "login";
 	}
 	
-	//×¢²á
+	/**
+	 * ×¢²á
+	 * @return
+	 */
 	@RequestMapping("/regist")
 	public String toRegist(){
 		
@@ -42,12 +50,20 @@ public class HomeController {
 	}
 	
 
-	//×¢²á
+	/**
+	 * ÁªÂçÎÒÃÇ
+	 * @return
+	 */
 	@RequestMapping("/contact")
-	public String toContact(){
+	public ModelAndView toContact(){
+		ModelAndView view = new ModelAndView();
+		HomeWebDto webDto = new HomeWebDto();
 		
-		System.out.print("toContact");
-		return "contact/contact";
+		webDto.setCurrentTab("contact");
+		view.addObject("webDto", webDto);
+		view.setViewName("contact/contact");
+		
+		return view;
 	}
 	
 }

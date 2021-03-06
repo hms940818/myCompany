@@ -39,3 +39,8 @@ ul li a {
 	color: black;
 	height:100%;
 }
+
+.current-page{
+	background-color:red;
+	color:white !important;
+}
