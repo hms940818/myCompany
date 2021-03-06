@@ -1,7 +1,7 @@
-<%@ page language="java" contentType="text/html; charset=utf-8"
-    pageEncoding="UTF-8"%>
+<%@ page language="java" contentType="text/html; charset=utf-8" pageEncoding="UTF-8"%>
 <!DOCTYPE >
  <%@ taglib prefix = "c" uri = "http://java.sun.com/jsp/jstl/core" %> 
+ <%@taglib prefix="spring" uri="http://www.springframework.org/tags" %>
 <header class="header">
     <p class="homelogo">
     	<img class="logo" src="/myCompany/resource/home/img/logo.png">
@@ -16,19 +16,19 @@
            <div class=" " >
                <ul class="header-ul">
                    <li class="header-li <c:if test="${webDto.currentTab eq 'top'}">current-page</c:if>" onmouseover="addLiBg(this);" onmouseleave="removeLiBg(this);">
-                       <a href="/myCompany/home/" title="首页" target="_self" class="<c:if test="${webDto.currentTab eq 'top'}">current-page</c:if>">首页</a>
+                       <a href="/myCompany/home/" title="<spring:message code="header.top"/>" target="_self" class="<c:if test="${webDto.currentTab eq 'top'}">current-page</c:if>"><spring:message code="header.top"/></a>
                    </li>
                    <li class="header-li" onmouseover="addLiBg(this);" onmouseleave="removeLiBg(this);">
-                       <a href="/100022/" title="about us" target="_self">about us</a>
+                       <a href="/100022/" title="<spring:message code="header.aboutUs"/>" target="_self"><spring:message code="header.aboutUs"/></a>
                    </li>
                    <li class="header-li" onmouseover="addLiBg(this);" onmouseleave="removeLiBg(this);">
-                       <a href="/myCompany/product/" title="产品" target="_blank">产品</a>
+                       <a href="/myCompany/product/" title="<spring:message code="header.product"/>" target="_blank"><spring:message code="header.product"/></a>
                    </li>
                    <li class="header-li" onmouseover="addLiBg(this);" onmouseleave="removeLiBg(this);">
-                       <a href="/myCompany/news/"title="contact" target="_self">News</a>
+                       <a href="/myCompany/news/"title="<spring:message code="header.news"/>" target="_self"><spring:message code="header.news"/></a>
                    </li>
                    <li class="header-li <c:if test="${webDto.currentTab eq 'contact'}">current-page</c:if>" onmouseover="addLiBg(this);" onmouseleave="removeLiBg(this);">
-                       <a href="/myCompany/contact/"title="contact" target="_self" class="<c:if test="${webDto.currentTab eq 'contact'}">current-page</c:if>">contact</a>
+                       <a href="/myCompany/contact/"title="<spring:message code="header.contact"/>" target="_self" class="<c:if test="${webDto.currentTab eq 'contact'}">current-page</c:if>"><spring:message code="header.contact"/></a>
                    </li>
                </ul>
            </div>
