@@ -18,6 +18,7 @@
 		<input name="birthday" type="tel" placeholder="生日"/><br/>
 		
 		<input name="registButton" type="button" value="注册" onclick="regist();"/><br/>
+		<input name="deleteButton" type="button" value="删除用户" onclick="deleteUser();"/><br/>
 		
 		</form>
 	</body>

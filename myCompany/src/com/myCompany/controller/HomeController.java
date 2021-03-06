@@ -33,7 +33,7 @@ public class HomeController {
 		return "login";
 	}
 	
-	//µÇÂ¼
+	//×¢²á
 	@RequestMapping("/regist")
 	public String toRegist(){
 		

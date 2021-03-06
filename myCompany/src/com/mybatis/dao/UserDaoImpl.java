@@ -44,8 +44,15 @@ public class UserDaoImpl implements UserDao{
 	}
 
 	@Override
-	public void DeleteStudent(int i) {
-		// TODO Auto-generated method stub
+	public void deleteUserById(User user) {
+
+        SqlSession sqlSession = sqlSessionFactory.openSession();
+        //执行插入操作
+        sqlSession.delete("deleteUserById", user);
+        // 提交事务
+        sqlSession.commit();
+        // 释放资源
+        sqlSession.close();
 		
 	}
 }

@@ -11,7 +11,7 @@
 	<body>
 		<form action="" method="post">
 		已经成功注册！<br/>
-		ID:${webdto.id}<br/>
+		ID:${webdto.email}<br/>
 		姓名:${webdto.name}<br/>
 		性别:${webdto.sex}<br/>
 		密码:${webdto.password}<br/>

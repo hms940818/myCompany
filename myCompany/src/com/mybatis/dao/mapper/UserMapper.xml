@@ -36,4 +36,8 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 		#{birthday}
 		)
 	</insert>
+	
+	<delete id="deleteUserById" parameterType="com.mybatis.dao.model.User">
+		DELETE tuser where "id" = #{id}
+	</delete>
 </mapper>

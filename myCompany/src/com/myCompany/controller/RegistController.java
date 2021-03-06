@@ -16,6 +16,10 @@ import com.mybatis.dao.model.User;
 
 public class RegistController {
 
+	/**
+	 * 注册页面初始化
+	 * @return
+	 */
 	@RequestMapping("/registInit")
 	public ModelAndView init(){
 		ModelAndView view = new ModelAndView();
@@ -29,6 +33,12 @@ public class RegistController {
 		return view;
 	}
 	
+	/**
+	 * 注册用户
+	 * @param webdto
+	 * @return
+	 * @throws IOException
+	 */
 	@RequestMapping("/registAccount")
 	public ModelAndView regist(RegistWebDto webdto) throws IOException{
 		ModelAndView view = new ModelAndView();
@@ -50,5 +60,32 @@ public class RegistController {
 		
 		return view;
 	}
-	
+
+	/**
+	 * 删除用户
+	 * @param webdto
+	 * @return
+	 * @throws IOException
+	 */
+	@RequestMapping("/deleteUser")
+	public ModelAndView deleteUser(RegistWebDto webdto) throws IOException{
+		ModelAndView view = new ModelAndView();
+		
+		RegistService registService = new RegistService();
+		User userBean = new User();
+		
+		userBean.setId(webdto.getEmail());
+		userBean.setUsername(webdto.getName());
+		userBean.setGender(webdto.getSex());
+		userBean.setBirthday(webdto.getBirthday());
+		userBean.setPassword(webdto.getPassword());
+		
+		registService.deleteUser(userBean);
+		
+		
+		view.addObject("webdto", webdto);
+		view.setViewName("regist/registComplete");
+		
+		return view;
+	}
 }
