@@ -11,14 +11,14 @@
 	<body>
 		<form action="" method="post">
 		
-		<input name="name" type="text" placeholder="姓名"/><br/>
-		<input name="sex" type="text" placeholder="性别"/><br/>
-		<input name="email" type="text" placeholder="Email"/><br/>
-		<input name="password" type="password" placeholder="密码"/><br/>
-		<input name="birthday" type="tel" placeholder="生日"/><br/>
+		<input name="name" type="text" placeholder="姓名"/><br/><br/>
+		<input name="sex" type="text" placeholder="性别"/><br/><br/>
+		<input name="email" type="text" placeholder="Email"/><br/><br/>
+		<input name="password" type="password" placeholder="密码"/><br/><br/>
+		<input name="birthday" type="tel" placeholder="生日"/><br/><br/>
 		
-		<input name="registButton" type="button" value="注册" onclick="regist();"/><br/>
-		<input name="deleteButton" type="button" value="删除用户" onclick="deleteUser();"/><br/>
+		<input name="registButton" type="button" value="注册" onclick="regist();"/><br/><br/>
+		<input name="deleteButton" type="button" value="删除用户" onclick="deleteUser();"/><br/><br/>
 		
 		</form>
 	</body>

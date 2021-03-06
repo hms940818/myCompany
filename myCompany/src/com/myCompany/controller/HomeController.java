@@ -13,7 +13,7 @@ import com.mybatis.dao.model.User;
 public class HomeController {
 
 	@RequestMapping("/home")
-	public ModelAndView Init(){
+	public ModelAndView init(){
 		ModelAndView view = new ModelAndView();
 		
 		HomeService homeService = new HomeService();
@@ -40,4 +40,14 @@ public class HomeController {
 		System.out.print("toRegist");
 		return "regist/regist";
 	}
+	
+
+	//зЂВс
+	@RequestMapping("/contact")
+	public String toContact(){
+		
+		System.out.print("toContact");
+		return "contact/contact";
+	}
+	
 }
