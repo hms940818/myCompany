@@ -9,13 +9,16 @@ public class HomeWebDto implements Serializable {
 	private static final long serialVersionUID = 802516060441676434L;
 
 	public HomeWebDto() {
-		// TODO Auto-generated constructor stub
+
 	}
-	private String currentTab;
+
+    private String currentTab;// 当前页面
+    private boolean spFlg;// 电脑・手机区分
 	
-	public HomeWebDto(String currentTab) {
+    public HomeWebDto(String currentTab, boolean spFlg) {
 		super();
 		this.currentTab = currentTab;
+        this.spFlg = spFlg;
 	}
 
 	/**
@@ -32,9 +35,24 @@ public class HomeWebDto implements Serializable {
 		this.currentTab = currentTab;
 	}
 
-	/**
-	 * @return the serialversionuid
-	 */
+    /**
+     * @return the spFlg
+     */
+    public boolean isSpFlg() {
+        return spFlg;
+    }
+
+    /**
+     * @param spFlg
+     *            the spFlg to set
+     */
+    public void setSpFlg(boolean spFlg) {
+        this.spFlg = spFlg;
+    }
+
+    /**
+     * @return the serialversionuid
+     */
 	public static long getSerialversionuid() {
 		return serialVersionUID;
 	}

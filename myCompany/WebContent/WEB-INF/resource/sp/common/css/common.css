@@ -1,0 +1,48 @@
+@charset "UTF-8";
+body{
+	width:100%;
+}
+.header{
+	height: 100px;
+    background: #f2f5f8;
+}
+。header-div1{
+	float: right;
+}
+.homelogo{
+	width: 200px;
+    float: left;
+}
+
+.header-ul{
+	list-style-type: none;
+    line-height: normal;
+}
+
+.header-li{
+	line-height: 100px;
+    float: left;
+    margin-left: 10px;
+    width:100px;
+    text-align: center;
+}
+
+.regist-button{
+	float:right;
+}
+
+.login-button{
+	float:right;
+	margin-right:10px;
+}
+
+ul li a {
+	text-decoration:none;
+	color: black;
+	height:100%;
+}
+
+.current-page{
+	background-color:red;
+	color:white !important;
+}
