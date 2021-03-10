@@ -14,7 +14,7 @@
 		<link rel="stylesheet" type="text/css" href="/myCompany/resource/common/css/common.css">
 		<script type="text/javascript" src="/myCompany/resource/common/js/common.js"></script>
 	</c:otherwise>
-</c:choose>
+</c:choose> 
 <header class="header">
     <p class="homelogo">
     	<img class="logo" src="/myCompany/resource/home/img/logo.png">
