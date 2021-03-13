@@ -30,17 +30,17 @@
                 
                 <!-- 关于我们 -->
                 <li class="header-li <c:if test="${webDto.currentTab eq 'aboutus'}">current-page</c:if>" onmouseover="addLiBg(this);" onmouseleave="removeLiBg(this);">
-                    <a href="/myCompany/aboutus/" title="<spring:message code="header.aboutUs"/>" target="_self"><spring:message code="header.aboutUs"/></a>
+                    <a href="/myCompany/aboutus/" title="<spring:message code="header.aboutUs"/>" target="_self" class="<c:if test="${webDto.currentTab eq 'aboutus'}">current-page</c:if>"><spring:message code="header.aboutUs"/></a>
                 </li>
                 
                 <!-- 产品 -->
                 <li class="header-li <c:if test="${webDto.currentTab eq 'product'}">current-page</c:if>" onmouseover="addLiBg(this);" onmouseleave="removeLiBg(this);">
-                    <a href="/myCompany/product/" title="<spring:message code="header.product"/>" target="_self"><spring:message code="header.product"/></a>
+                    <a href="/myCompany/product/" title="<spring:message code="header.product"/>" target="_self" class="<c:if test="${webDto.currentTab eq 'product'}">current-page</c:if>"><spring:message code="header.product"/></a>
                 </li>
                 
                 <!-- 新闻 -->
                 <li class="header-li <c:if test="${webDto.currentTab eq 'news'}">current-page</c:if>" onmouseover="addLiBg(this);" onmouseleave="removeLiBg(this);">
-                    <a href="/myCompany/news/"title="<spring:message code="header.news"/>" target="_self"><spring:message code="header.news"/></a>
+                    <a href="/myCompany/news/"title="<spring:message code="header.news"/>" target="_self" class="<c:if test="${webDto.currentTab eq 'news'}">current-page</c:if>"><spring:message code="header.news"/></a>
                 </li>
                 
                 <!-- 联系我们 -->
