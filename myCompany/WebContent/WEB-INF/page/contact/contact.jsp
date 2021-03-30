@@ -22,6 +22,7 @@
     <a href="?lang=en_EN"><spring:message code="language.en"/></a>
 		<form method="post">
 			<%@ include file="../common/commomHeader.jsp"%>
+			<br/><br/>
 		    <div class="contact-title"><spring:message code="contact.title"/></div>
 		    <div class="contact-all">
 		    <spring:message code="contact.name"/>：<input type="text" name="name"/><br/><br/><!-- 姓名 -->
@@ -33,5 +34,6 @@
 		  </div>
 		 
 		</form>
+		<%@ include file="../common/commomFooter.jsp"%>
 	</body>
 </html>

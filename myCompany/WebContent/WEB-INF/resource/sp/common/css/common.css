@@ -1,6 +1,7 @@
 @charset "UTF-8";
 body{
 	width:100%;
+	margin:0;
 }
 .header{
 	height: 100px;
@@ -9,8 +10,22 @@ body{
 。header-div1{
 	float: right;
 }
+.footer{
+	height: 200px;
+    background-color: beige;;
+    width: 100%;
+    bottom: 0;
+}
+.footer-div2{
+	margin: 2% 0 0 15%;
+}
 .homelogo{
-    float: left;
+    margin:0 0 0 50px;
+    width: 200px;
+    height: 100px;
+}
+.homelogo img{
+    width: 100%;
 }
 
 .header-ul{

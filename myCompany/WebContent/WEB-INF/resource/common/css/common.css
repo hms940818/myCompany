@@ -6,10 +6,20 @@
 。header-div1{
 	float: right;
 }
+.footer{
+	height: 200px;
+    background-color: beige;
+    position:absolute;
+    width: 100%;
+    bottom: 0;
+}
+.footer-div2{
+	margin: 2% 0 0 44%;
+}
 .homelogo{
 	width: 200px;
     float: left;
-    margin-left: 600px;
+    margin: 0 0 0 600px;
 }
 
 .header-ul{

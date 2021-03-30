@@ -4,7 +4,6 @@
 <%@taglib prefix="spring" uri="http://www.springframework.org/tags" %>
 <c:choose>
 	<c:when test="${webDto.spFlg}">
-	<!DOCTYPE html PUBLIC "-//WAPFORUM//DTD XHTML Mobile 1.0//EN" "http://www.wapforum.org/DTD/xhtml-mobile10.dtd">
 		<!-- 手机版 -->
 		<link rel="stylesheet" type="text/css" href="/myCompany/resource/sp/common/css/common.css">
 		<script type="text/javascript" src="/myCompany/resource/sp/common/js/common.js"></script>
@@ -17,7 +16,7 @@
 </c:choose> 
 <header class="header">
     <p class="homelogo">
-    	<img class="logo" src="/myCompany/resource/home/img/logo.png">
+    	<img class="logo" src="/myCompany/resource/common/img/logo.png">
     </p>
 
     <div class="header-div1" id="doc-topbar-collapse">

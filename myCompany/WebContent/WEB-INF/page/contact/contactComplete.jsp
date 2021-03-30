@@ -26,5 +26,6 @@
 			<spring:message code="contact。complete.message" />
 		</div>
 	</form>
+	<%@ include file="../common/commomFooter.jsp"%>
 </body>
 </html>

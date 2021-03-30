@@ -29,5 +29,6 @@
 <!--           	<button type="button" id="loginButton" onclick="toLogin()">登录</button> -->
 <!--       </div> -->
 		</form>
+		<%@ include file="../common/commomFooter.jsp"%>
 	</body>
 </html>
