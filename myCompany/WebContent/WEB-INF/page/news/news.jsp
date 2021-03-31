@@ -13,6 +13,19 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <title><spring:message code="home.title"/></title>
+<c:choose>
+	<c:when test="${webDto.spFlg}">
+		<!-- 手机版 -->
+		<link rel="stylesheet" type="text/css" href="/myCompany/resource/sp/news/css/news.css">
+		<script type="text/javascript" src="/myCompany/resource/sp/news/js/news.js"></script>
+	</c:when>
+	<c:otherwise>
+		<!-- 电脑版 -->
+		<link rel="stylesheet" type="text/css" href="/myCompany/resource/news/css/news.css">
+		<script type="text/javascript" src="/myCompany/resource/news/js/news.js"></script>
+	</c:otherwise>
+</c:choose> 
+
 </head>
 	<body>
 	<spring:message code="language.message"/>:
@@ -20,7 +33,8 @@
     <a href="?lang=en_EN"><spring:message code="language.en"/></a>
 		<form method="post">
 		<%@ include file="../common/commomHeader.jsp"%>
-		    
+		    		<br/><br/>
+		<div class="home-title"><spring:message code="contact.title"/></div>
 <!--       <div class="regist-button"> -->
 <!--           	<button type="button" id="registButton" onclick="toRegist()">注册</button> -->
 <!--       </div> -->

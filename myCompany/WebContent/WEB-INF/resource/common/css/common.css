@@ -1,4 +1,7 @@
 @charset "UTF-8";
+body{
+	margin:0;
+}
 .header{
 	height: 100px;
     background: #f2f5f8;
@@ -19,7 +22,12 @@
 .homelogo{
 	width: 200px;
     float: left;
-    margin: 0 0 0 600px;
+    margin: 0 0 0 30%;
+}
+.footerlogo{
+	width: 200px;
+    float: left;
+    margin: 20px 0 0 600px;
 }
 
 .header-ul{

@@ -22,6 +22,7 @@
 <body>
 	<form method="post">
 		<%@ include file="../common/commomHeader.jsp"%>
+		<br><br>
 		<div class="contact-title">
 			<spring:message code="contact。complete.message" />
 		</div>

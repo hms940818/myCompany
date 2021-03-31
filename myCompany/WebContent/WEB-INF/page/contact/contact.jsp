@@ -15,6 +15,18 @@
 <link rel="stylesheet" type="text/css" href="/myCompany/resource/contact/css/contact.css">
 <script type="text/javascript" src="/myCompany/resource/contact/js/contact.js"></script>
 <title><spring:message code="home.title"/></title>
+<c:choose>
+	<c:when test="${webDto.spFlg}">
+		<!-- 手机版 -->
+		<link rel="stylesheet" type="text/css" href="/myCompany/resource/sp/contact/css/contact.css">
+		<script type="text/javascript" src="/myCompany/resource/sp/contact/js/contact.js"></script>
+	</c:when>
+	<c:otherwise>
+		<!-- 电脑版 -->
+		<link rel="stylesheet" type="text/css" href="/myCompany/resource/contact/css/contact.css">
+		<script type="text/javascript" src="/myCompany/resource/contact/js/contact.js"></script>
+	</c:otherwise>
+</c:choose> 
 </head>
 	<body>
 	<spring:message code="language.message"/>:
